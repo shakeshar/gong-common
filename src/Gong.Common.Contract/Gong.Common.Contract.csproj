@@ -8,7 +8,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Description>Gong shared contracts</Description>
     <PackageId>Gong.Common.Contract</PackageId>
-    <Company>Gong</Company>
+    <Company>Gong</Company> 
     <Author>Stefan Lindberg</Author>
     <Version>1.0.0-rc$([System.DateTime]::UtcNow.ToString(yyyyMMddHHmm))</Version>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
