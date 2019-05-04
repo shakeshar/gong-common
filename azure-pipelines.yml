@@ -14,7 +14,7 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'echo $(tester)'
+    script: 'echo $(test)'
 
 - task: CmdLine@2
   inputs:
