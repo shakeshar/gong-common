@@ -17,12 +17,19 @@ steps:
     script: 'echo $(test)'
 
 - task: DotNetCoreCLI@2
+  displayName: 'dotnet restore'
+  inputs:
+    command: restore
+    projects: '**/Gong.Common.Infrastructure.csproj'
+
+- task: DotNetCoreCLI@2
   displayName: 'dotnet build'
   inputs:
     command: 'build'
     projects: '**/*.csproj'
     feedsToUse: 'select'
     versioningScheme: 'off'
+
 
     
 - task: DotNetCoreCLI@2
@@ -32,3 +39,11 @@ steps:
     projects: '**/Gong.Common.Test.csproj'
     feedsToUse: 'select'
     versioningScheme: 'off'
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet pack'
+  enabled: 'true'
+  inputs:
+    command: 'pack'
+    verbosityPack: Normal
+    searchPatternPack: '**/*.csproj'
