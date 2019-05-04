@@ -51,8 +51,10 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'custom'
-    custom: 'nuget push **/*.nupkg -k $(nugetApiKey) -s https://api.nuget.org/v3/index.json'
+    custom: ' nuget push **/*.nupkg -k $(nugetApiKey) -s https://api.nuget.org/v3/index.json'
     feedsToUse: 'select'
     versioningScheme: 'off'
+
+
 
 
