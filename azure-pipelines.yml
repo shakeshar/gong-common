@@ -6,9 +6,7 @@
 trigger:
 - master
 
-variables:
-- group: secrets
-- name: test
+
 
 pool:
   vmImage: 'ubuntu-latest'
