@@ -8,7 +8,7 @@ trigger:
 
 variables:
 - group: secrets
-- name: 
+- name: test
 
 pool:
   vmImage: 'ubuntu-latest'
