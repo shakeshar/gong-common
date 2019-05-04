@@ -6,9 +6,17 @@
 trigger:
 - master
 
+variables:
+- group: secrets
+- name: 
+
 pool:
   vmImage: 'ubuntu-latest'
 steps:
+- task: CmdLine@2
+  inputs:
+    script: 'echo $(test)   
+
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
   inputs:
@@ -17,6 +25,7 @@ steps:
     feedsToUse: 'select'
     versioningScheme: 'off'
 
+    
 - task: DotNetCoreCLI@2
   displayName: 'dotnet test'
   inputs:
