@@ -13,7 +13,7 @@ pool:
 steps:
 - task: CmdLine@2
   inputs:
-    script: 'echo $(test)'   
+    script: echo $(test)   
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
