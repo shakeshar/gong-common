@@ -11,6 +11,11 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 steps:
+
+- task: CmdLine@2
+  inputs:
+    script: 'echo $(tester)'
+
 - task: CmdLine@2
   inputs:
     script: echo $(test)   
