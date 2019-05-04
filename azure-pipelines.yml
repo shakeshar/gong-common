@@ -8,10 +8,6 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
-
-
-
-
 steps:
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
@@ -23,8 +19,8 @@ steps:
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet test'
-      inputs:
-        command: 'test'
-        projects: '**/Gong.Common.Test.csproj'
-        feedsToUse: 'select'
-        versioningScheme: 'off'
+  inputs:
+    command: 'test'
+    projects: '**/Gong.Common.Test.csproj'
+    feedsToUse: 'select'
+    versioningScheme: 'off'
