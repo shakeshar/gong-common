@@ -16,10 +16,6 @@ steps:
   inputs:
     script: 'echo $(test)'
 
-- task: CmdLine@2
-  inputs:
-    script: echo $(test)   
-
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
   inputs:
