@@ -9,7 +9,7 @@ trigger:
  
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'ubuntu-16.04'
 steps:
 
 - task: CmdLine@2
@@ -54,6 +54,8 @@ steps:
     custom: 'nuget push **/*.nupkg'
     feedsToUse: 'select'
     versioningScheme: 'off'
+
+
 
 
 
