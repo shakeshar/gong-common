@@ -56,8 +56,8 @@ steps:
     command: 'push'
     feedsToUse: 'select'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg'
-    nuGetFeedType: 'internal'
-    publishVstsFeed: 'fd5542cf-175c-4ecd-87c5-c7c9d69fbced'
+    nuGetFeedType: 'external'
+    publishFeedCredentials: 'nugetGong'
     publishPackageMetadata: false
     versioningScheme: 'off'
 
