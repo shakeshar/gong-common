@@ -48,6 +48,24 @@ steps:
     verbosityPack: Normal
     searchPatternPack: '**/*.csproj'
 
+- task: NuGetCommand@2
+  inputs:
+    command: 'custom'
+    feedsToUse: 'select'
+    versioningScheme: 'off'
+    arguments: 'setapikey $(nugetApiKey)'
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'push'
+    feedsToUse: 'select'
+    vstsFeed: 'https://api.nuget.org/v3/index.json'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: 'https://api.nuget.org/v3/index.json'
+    publishPackageMetadata: false
+    versioningScheme: 'off'
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'custom'
