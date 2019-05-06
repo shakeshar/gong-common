@@ -34,6 +34,33 @@ steps:
     feedsToUse: 'select'
     versioningScheme: 'off'
 
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet pack'
+  enabled: 'true'
+  inputs:
+    command: 'pack'
+    verbosityPack: Normal
+    searchPatternPack: '**/*.csproj'
+
+- task: NuGetCommand@2
+  displayName: 'nuget set apikey'
+  inputs:
+    command: 'custom'
+    feedsToUse: 'select'
+    versioningScheme: 'off'
+    arguments: 'setapikey $(nugetApiKey)'
+
+- task: NuGetCommand@2
+  displayName: 'nuget push'
+  inputs:
+    command: 'push'
+    feedsToUse: 'select'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: 'fd5542cf-175c-4ecd-87c5-c7c9d69fbced'
+    publishPackageMetadata: false
+    versioningScheme: 'off'
+
 
 
 
