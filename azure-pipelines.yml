@@ -5,16 +5,10 @@
 
 trigger:
 - master
-
- 
-
 pool:
   vmImage: 'ubuntu-16.04'
 steps:
 
-- task: CmdLine@2
-  inputs:
-    script: 'echo $(test)'
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet restore'
@@ -49,6 +43,7 @@ steps:
     searchPatternPack: '**/*.csproj'
 
 - task: NuGetCommand@2
+  displayName: 'nuget set apikey'
   inputs:
     command: 'custom'
     feedsToUse: 'select'
@@ -56,6 +51,7 @@ steps:
     arguments: 'setapikey $(nugetApiKey)'
 
 - task: NuGetCommand@2
+  displayName: 'nuget push'
   inputs:
     command: 'push'
     feedsToUse: 'select'
@@ -64,14 +60,6 @@ steps:
     publishVstsFeed: 'fd5542cf-175c-4ecd-87c5-c7c9d69fbced'
     publishPackageMetadata: false
     versioningScheme: 'off'
-
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'custom'
-    custom: 'nuget push **/*.nupkg'
-    feedsToUse: 'select'
-    versioningScheme: 'off'
-
 
 
 
