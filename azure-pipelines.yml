@@ -59,10 +59,9 @@ steps:
   inputs:
     command: 'push'
     feedsToUse: 'select'
-    vstsFeed: 'https://api.nuget.org/v3/index.json'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg'
     nuGetFeedType: 'internal'
-    publishVstsFeed: 'https://api.nuget.org/v3/index.json'
+    publishVstsFeed: 'fd5542cf-175c-4ecd-87c5-c7c9d69fbced'
     publishPackageMetadata: false
     versioningScheme: 'off'
 
