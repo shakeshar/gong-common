@@ -18,7 +18,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.3" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Gong.Common.Contract" Version="1.0.0-rc201905041658" />
+    <PackageReference Include="Gong.Common.Contract" Version="1.0.0-rc201905061459" />
   </ItemGroup>
 
   <ItemGroup>
