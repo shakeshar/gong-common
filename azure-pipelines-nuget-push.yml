@@ -54,7 +54,7 @@ steps:
     command: 'custom'
     feedsToUse: 'select'
     versioningScheme: 'off'
-    arguments: 'setapikey $(nugetApiKey)'
+    arguments: 'setapikey 70fd35b7db09dfc99ce7c480b77d71beb8b25d32'
 
 - task: NuGetCommand@2
   displayName: 'nuget push'
