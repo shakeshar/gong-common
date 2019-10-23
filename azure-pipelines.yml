@@ -17,6 +17,12 @@ steps:
     projects: '**/Gong.Common.Infrastructure.csproj'
 
 - task: DotNetCoreCLI@2
+  displayName: 'dotnet restore'
+  inputs:
+    command: restore
+    projects: '**/Gong.Common.UiPath.Features.Test.csproj'
+
+- task: DotNetCoreCLI@2
   displayName: 'dotnet build'
   inputs:
     command: 'build'
