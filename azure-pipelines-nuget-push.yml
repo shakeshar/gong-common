@@ -6,7 +6,7 @@
 trigger:
 - master
 pool:
-  vmImage: 'ubuntu-16.04'
+  vmImage: 'windows-2019'
 steps:
 
 
@@ -15,6 +15,12 @@ steps:
   inputs:
     command: restore
     projects: '**/Gong.Common.Infrastructure.csproj'
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet restore'
+  inputs:
+    command: restore
+    projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet build'
