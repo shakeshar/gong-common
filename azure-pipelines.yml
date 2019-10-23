@@ -15,6 +15,12 @@ steps:
   inputs:
     command: restore
     projects: '**/Gong.Common.Infrastructure.csproj'
+    
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet restore'
+  inputs:
+    command: restore
+    projects: '**/*.csproj'
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet restore'
