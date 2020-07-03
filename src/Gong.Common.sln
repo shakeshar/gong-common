@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gong.Common.Test", "Gong.Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gong.Common.Contract", "Gong.Common.Contract\Gong.Common.Contract.csproj", "{53DB6634-743F-4038-AF9C-DF5E934298FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gong.Common.UiPath.Features.Test", "Gong.Common.UiPath.Features.Test\Gong.Common.UiPath.Features.Test.csproj", "{5D6D30DC-3BEE-4396-9761-AACB24261FA5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{53DB6634-743F-4038-AF9C-DF5E934298FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53DB6634-743F-4038-AF9C-DF5E934298FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53DB6634-743F-4038-AF9C-DF5E934298FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5D6D30DC-3BEE-4396-9761-AACB24261FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D6D30DC-3BEE-4396-9761-AACB24261FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D6D30DC-3BEE-4396-9761-AACB24261FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D6D30DC-3BEE-4396-9761-AACB24261FA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
